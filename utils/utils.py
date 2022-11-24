@@ -30,7 +30,7 @@ def convert_utf(file):
     read_line = file.readlines()
     decoded_list = []
     for item in read_line:
-        if len(item) < 80:
+        if len(item) < 80 or len(item) > 84:
             raise ValidationError(
                 "Certifique-se que o arquivo .txt contém apenas padrões CNAB separados por quebra de linha"
             )

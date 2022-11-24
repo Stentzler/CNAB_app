@@ -39,6 +39,5 @@ def render_transactions_view(request):
     return render(request, "cnab/shop_list.html", context)
 
 
-# MD file
 # Testes
 # Heroku
