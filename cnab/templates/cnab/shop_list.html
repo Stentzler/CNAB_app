@@ -19,8 +19,15 @@
             }
             .links{
               width: 100%;
-              display: flex;
-              justify-content: space-around;
+              display: inline-block;
+            }
+
+            .link-primary{
+              margin-right: 16px;
+            }
+
+            .bars{
+              margin-right: 16px;
             }
         </style>
 	</head>
@@ -30,6 +37,7 @@
             <div class="links p-4">
               {% for shop in shop_list %}
               <a href="#{{shop.0}}" class="link-primary">{{shop.0}}</a>
+              <span class="bars">||</span>
               {% endfor %}
             </div>
             {% for shop in shop_list %}
