@@ -39,11 +39,6 @@ def render_transactions_view(request):
     return render(request, "cnab/shop_list.html", context)
 
 
-#
-
-# Todo
-# configurar PG
 # MD file
 # Testes
-# Docker
 # Heroku
