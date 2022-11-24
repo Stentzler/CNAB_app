@@ -8,7 +8,7 @@
 			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 			crossorigin="anonymous"
 		/>
-		<title>Result Table</title>
+		<title>CNAB Table</title>
         <style>
             h3{
                 text-align: center;
@@ -63,14 +63,14 @@
                         <td>{{transaction.cartao}}</td>
                         <td>{{transaction.dono_da_loja}}</td>
                         <td>{{transaction.data}} {{transaction.hora}}</td>
-                        <td>{{transaction.valor}}</td>
+                        <td>R${{transaction.valor}}</td>
                     </tr>
                     {% endif %}
                     {% endfor %}
                     <tr class="table-danger">
                         <th scope="row"></th>
                         <td colspan="6">Total:</td >
-                        <td>{{shop.1}}</td>
+                        <td>R${{shop.1}}</td>
                     </tr>
                 </tbody>
             </table>
