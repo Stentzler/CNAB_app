@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from django.shortcuts import render, redirect
 from utils.utils import (
     convert_from_cnab,
@@ -7,12 +8,18 @@ from utils.utils import (
 )
 from .models import Transaction
 from .forms import UploadFileForm
+import magic
+import ipdb
 
 
 def render_form_view(request):
     if request.method == "POST":
         form = UploadFileForm(request.POST, request.FILES)
         file = request.FILES["file"]
+
+        filetype = magic.from_buffer(file.read())
+        if not "text" in filetype:
+            raise ValidationError("File extension is not .txt")
 
         decoded = convert_utf(file)
 
