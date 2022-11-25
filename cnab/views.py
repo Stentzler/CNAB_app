@@ -8,8 +8,6 @@ from utils.utils import (
 )
 from .models import Transaction
 from .forms import UploadFileForm
-import magic
-import ipdb
 
 
 def render_form_view(request):
@@ -17,9 +15,8 @@ def render_form_view(request):
         form = UploadFileForm(request.POST, request.FILES)
         file = request.FILES["file"]
 
-        filetype = magic.from_buffer(file.read())
-        if not "text" in filetype:
-            raise ValidationError("File extension is not .txt")
+        if file.content_type != "text/plain":
+            raise ValidationError("File format must be .txt")
 
         decoded = convert_utf(file)
 
@@ -44,7 +41,3 @@ def render_transactions_view(request):
     context = {"shop_list": shop_list, "transactions": all_transactions}
 
     return render(request, "cnab/shop_list.html", context)
-
-
-# Testes
-# Heroku

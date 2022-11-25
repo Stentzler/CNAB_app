@@ -39,7 +39,6 @@ def convert_utf(file):
             raise ValidationError(
                 "Certifique-se que o arquivo .txt contém apenas padrões CNAB separados por quebra de linha"
             )
-
         decoded_list.append(item)
     return decoded_list
 
