@@ -18,7 +18,7 @@
 
 ## Instalação (Utilizando Docker):
 - Clone este repositório em seu ambiente local
-- Crie um arquivo .env baseando-se no arquivo .env.example
+- Crie um arquivo `.env` baseando-se no arquivo **`.env.example`**
 - Adicione um ambiente virtual **`python -m venv venv`** na pasta do projeto
 - Ative o ambiente virtual criado || Linux: `source ./venv/bin/activate` || Windows: `./venv/Scripts/activate`
 - Rode o comando **`docker-compose up --build`** e aguarde a finalização da configuração
@@ -27,7 +27,7 @@
 
 ## Instalação sem docker (local):
 - Clone este repositório em seu ambiente local
-- Crie um arquivo .env baseando-se no arquivo .env.example
+- Crie um arquivo `.env` baseando-se no arquivo **`.env.example`**
 - Adicione um ambiente virtual **`python -m venv venv`** na pasta do projeto
 - Ative o ambiente virtual criado || **Linux:`source ./venv/bin/activate` || Windows:`./venv/Scripts/activate`**
 - Rode o comando **`pip install -r requirements.txt`** para instalar as dependências
