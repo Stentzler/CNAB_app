@@ -12,6 +12,10 @@
 - Docker
 - SQLite 3
 
+## Endpoints:
+- Para fazer upload do arquivo: (http://localhost:8000)
+- Para acessar as tabelas com os dados da DB: (http://localhost:8000/transactions/)
+
 ## Instalação (Utilizando Docker):
 - Clone este repositório em seu ambiente local
 - Crie um arquivo .env baseando-se no arquivo .env.example
