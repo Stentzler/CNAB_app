@@ -19,8 +19,6 @@
 ## Instalação (Utilizando Docker):
 - Clone este repositório em seu ambiente local
 - Crie um arquivo `.env` baseando-se no arquivo **`.env.example`**
-- Adicione um ambiente virtual **`python -m venv venv`** na pasta do projeto
-- Ative o ambiente virtual criado || Linux: `source ./venv/bin/activate` || Windows: `./venv/Scripts/activate`
 - Rode o comando **`docker-compose up --build`** e aguarde a finalização da configuração
 - Agora a aplicação estará rodando neste link: (http://localhost:8000)
 - Caso queira acessar apenas as tabelas com as transações já contidas na database acesse (http://localhost:8000/transactions/)
