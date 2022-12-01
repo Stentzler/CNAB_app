@@ -1,6 +1,5 @@
 from cnab.models import Transaction
 from cnab.serializers import TransactionSerializer
-from django.core.exceptions import ValidationError
 import re
 
 
@@ -35,11 +34,8 @@ def convert_utf(file):
     result = [re.sub(r"\r\n", "", line) for line in result]
 
     for item in result:
-        if len(item) != 80:
-            raise ValidationError(
-                "Certifique-se que o arquivo .txt contém apenas padrões CNAB separados por quebra de linha"
-            )
         decoded_list.append(item)
+
     return decoded_list
 
 
